@@ -2,7 +2,7 @@
 Sandbox for ES6 using babel, browserify and grunt. This repo is a personal playground used to gain experience and exposure to ES6 features using the Babel transpiler.
 
 # Get Started
-## Clone repository
+## Clone the Repository
 Open a terminal and enter the *git clone* command to a directory of your choice.
 
     git clone https://github.com/mpolizzotti/es6sandbox.git
