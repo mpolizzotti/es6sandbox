@@ -2,6 +2,11 @@
 Sandbox for ES6 using babel, browserify and grunt. This repo is a personal playground used to gain experience and exposure to ES6 features using the Babel transpiler.
 
 # Get Started
+## Clone repository
+Open a terminal and enter the *git clone* command to a directory of your choice.
+
+    git clone https://github.com/mpolizzotti/es6sandbox.git
+
 ## Install Node & NPM
 This sandbox leverages [node.js](http://nodejs.org/) for its development server. This sandbox also makes use of npm, a package manager for installing node modules. The latest releases of node ships with npm so only a node installation is required. Node offers platform installers for both Windows and Mac OSX. They also offer binaries for Windows, Mac OSX and Linux systems. Visit the [download](https://nodejs.org/en/download/) page for more information.
 
