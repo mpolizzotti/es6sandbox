@@ -1,12 +1,12 @@
+console.log('let');
+console.log('------------------------------------');
+
 /**
  * let
- * Example implmentations for the use of let.
+ * Use of let keyword.
  */
 (function() {
     'use strict';
-
-    console.log('let');
-    console.log('------------------------------------');
 
     // The let keyword provides true block scoping.
     var doWork = function (flag) {
@@ -27,7 +27,7 @@
     };
 
     var result = doWork(false);
-
-    console.log('====================================');
-    console.log(' ');
 })();
+
+console.log('====================================');
+console.log(' ');

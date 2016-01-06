@@ -1,12 +1,12 @@
+console.log('Arrow Functions');
+console.log('------------------------------------');
+
 /**
  * Arrow Functions
  * Example implmentations for arrow functions.
  */
 (function() {
     'use strict';
-
-    console.log('Arrow Functions');
-    console.log('------------------------------------');
 
     // ES5 version.
     var greeting = function (message, name) {
@@ -46,7 +46,7 @@
         }
     };
     radioStation.broadcastOnClick();
-
-    console.log('====================================');
-    console.log(' ');
 })();
+
+console.log('====================================');
+console.log(' ');
