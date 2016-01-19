@@ -25,9 +25,6 @@ console.log('------------------------------------');
 
 })();
 
-console.log(' ');
-console.log(' ');
-
 /**
  * destructuring
  * Use of destructuring with objects.
@@ -60,8 +57,6 @@ console.log(' ');
 
 })();
 
-console.log(' ');
-
 /**
  * destructuring
  * Use of destructuring with objects.
@@ -79,8 +74,6 @@ console.log(' ');
     console.log('color: ', color);
     console.log('position: ', position);
 })();
-
-console.log(' ');
 
 /**
  * destructuring
@@ -102,9 +95,6 @@ console.log(' ');
     console.log('name: ', name);
     console.log('state: ', state);
 })();
-
-console.log(' ');
-console.log(' ');
 
 /**
  * destructuring
