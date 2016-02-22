@@ -11,11 +11,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.task.loadTasks('tasks');
 
     // build
     // Build the distribution folder (ES6 to ES5).
-    grunt.registerTask('build', ['copy:dist', 'browserify']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'browserify']);
 
     // grunt
     // Default tasks that execute with the grunt command.

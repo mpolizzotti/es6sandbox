@@ -10,6 +10,18 @@ module.exports = function (grunt) {
                         dest: 'dist/',
                         expand: true,
                         cwd: 'client/'
+                    },
+                    {
+                        src: ['**'],
+                        dest: 'dist/css',
+                        expand: true,
+                        cwd: 'client/css'
+                    },
+                    {
+                        src: ['**'],
+                        dest: 'dist/js/lib',
+                        expand: true,
+                        cwd: 'client/js/lib'
                     }
                 ]
             }

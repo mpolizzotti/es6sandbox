@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     ]
                 },
                 files: {
-                    './dist/app.bundle.js': ['./client/js/**/*.js']
+                    './dist/js/src/app.bundle.spec.js': ['./client/js/src/**/*.spec.js']
                 }
             }
         }
