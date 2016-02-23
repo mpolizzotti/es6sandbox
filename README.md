@@ -1,5 +1,5 @@
 # ES6 Sandbox
-Sandbox for ES6 using babel, browserify and grunt. This repo is a personal playground used to gain experience and exposure to ES6 features using the Babel transpiler.
+Sandbox for ES6 using jasmine, babel, browserify and grunt. This repo is a personal playground used to gain experience and exposure to ES6 features using the Babel transpiler.
 
 # Get Started
 ## Clone the Repository
@@ -59,4 +59,4 @@ Run the below command.
 
     npm start
     
-Open a browser window and navigate to *localhost:3500* and open the browser console to preview the output of transcompiled ES6 code.
+Open a browser window and navigate to *localhost:3500* and open the browser. Code examples are rendered to the browser using the Jasmine testing framework.
