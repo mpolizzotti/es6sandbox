@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     grunt.config.merge({
         watch: {
             scripts: {
-                files: ['client/js/**/*.js'],
+                files: ['client/js/**/*.spec.js'],
                 tasks: ['browserify']
             }
         }
