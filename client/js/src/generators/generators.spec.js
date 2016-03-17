@@ -1,6 +1,6 @@
 describe('generators', function () {
 
-    it('can generate an iterable', function () {
+    it('can generate an iterable.', function () {
         // Generator function, under the hood, is creating
         // an iterator object, similar to the ArrayIterator
         // that was built witin the iterators.spec.js file. 
@@ -21,7 +21,7 @@ describe('generators', function () {
         expect(sum).toBe(6);
     });
 
-    it('can be used with a for of loop', function () {
+    it('can be used with a for of loop.', function () {
         let numbers = function*(start, end) {
             for (let i = start; i <= end; i++) {
                 yield i;
@@ -90,4 +90,26 @@ describe('generators', function () {
 
         expect(count).toBe(2);
     });
+
+    it('can take a parameter from next(param).', function () {
+        let range = function* (start, end) {
+            let current = start;
+            while (current <= end) {
+                let delta = yield current;
+                current += delta || 1;
+            }
+        }
+
+        let result = [];
+        let iterator = range(1, 10);
+        let next = iterator.next();
+
+        while (!next.done) {
+            result.push(next.value);
+            next = iterator.next(2);
+        }
+
+        expect(result).toEqual([1, 3, 5, 7, 9]);
+
+    })
 });
