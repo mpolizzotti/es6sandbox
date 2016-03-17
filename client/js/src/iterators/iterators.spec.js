@@ -1,5 +1,6 @@
 describe('iterators', function () {
     it('can iterate over an array of numbers using the .next() method.', function () {
+        // This is an example of using iterators at a low level.
         let sum = 0;
         let numbers = [1, 2, 3, 4];
 
@@ -86,7 +87,13 @@ describe('iterators', function () {
 });
 
 describe('for of loop', function () {
-    it('can work with iteratables.', function () {
+    it('can work with iterables.', function () {
+        // The for-in loop cannot work with iterables.
+        // ES6 introduces the for-of loop for the purpose
+        // of working with iterables.
+        // 
+        // Behing the scenes the fo-of loop is calling the
+        // .next() and checking the done flag.
         let sum = 0;
         let numbers = [1, 2, 3, 4];
 
