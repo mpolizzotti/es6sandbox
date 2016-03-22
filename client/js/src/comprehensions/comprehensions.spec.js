@@ -62,7 +62,4 @@ describe('comprehensions', function () {
         expect(count).toBe(1);
         expect(found).toBe('Sue');
     });
-
-
-
 });
