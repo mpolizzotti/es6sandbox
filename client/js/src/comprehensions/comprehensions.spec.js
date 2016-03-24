@@ -56,7 +56,6 @@ describe('comprehensions', function () {
         for (let employee of take(filter(company, e => e[0] === 'S'), 1)) {
             count = count + 1;
             found = employee;
-            console.log('got: ', employee);
         }
 
         expect(count).toBe(1);
