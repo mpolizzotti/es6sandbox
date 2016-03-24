@@ -67,3 +67,42 @@ describe('Arrays', function () {
         expect(first).toBe(0);
     });
 });
+
+describe('Array Comprehensions', function () {
+    // Comprehensions are causing parse errors with the browserify plugin,
+    // which is why these tests are currently commented out.
+
+    /*
+    it('should create arrays easily.', function () {
+        let ary = [1, 2, 3];
+        let ary2 = [for (i of ary) i];
+        expect(ary).toEqual(ary2);
+    });
+
+    it('should create array values using a predicate function.', function () {
+        let ary = [1, 2, 3];
+        let ary2 = [for (i of ary) i * i];
+        expect(ary2).toEqual([1, 4, 9]); 
+    });
+
+    it('should create array values using a filter operation.', function () {
+        let ary = [1, 2, 3];
+        let ary2 = [for (i of ary) if (i < 3) i]; // [1, 2]
+        expect(ary2).toEqual([1, 2]); 
+    });
+    
+    it('should create array from multiple comprehension operations.', function () {
+        let firstNames = ['William', 'John', 'Blake'];
+        let middleNames = ['Robert', 'Andrew', 'John'];
+
+        let ary = [
+            for (first of firstNames)
+            for (middle of middleNames)
+            if (first != middle)
+            (first + '' middle + ' Smith')
+        ];
+
+        expect(ary[0]).toBe('William Robert Smith'); 
+    });
+    */
+});
