@@ -3,8 +3,11 @@ module.exports = function (grunt) {
 
     grunt.config.merge({
         clean: {
-            dist: [
+            setup: [
                 'dist/'
+            ],
+            teardown: [
+                'dist/js/src/spec/'
             ]
         }
     });

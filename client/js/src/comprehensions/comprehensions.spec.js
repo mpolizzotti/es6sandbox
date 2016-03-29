@@ -1,6 +1,10 @@
 describe('comprehensions', function () {
     // Comprehensions are a terse syntax for building arrays and generators.
 
+    // Support note:
+    // Comprehension didn't make it into the final version of ES6 and it doesn't seem
+    // to be considered for the next version either: https://github.com/tc39/ecma262
+
    it('can be used to replace for-of loops.', function () {
         class Company {
             constructor() {

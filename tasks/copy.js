@@ -13,15 +13,15 @@ module.exports = function (grunt) {
                     },
                     {
                         src: ['**'],
-                        dest: 'dist/css',
+                        dest: 'dist/css/',
                         expand: true,
-                        cwd: 'client/css'
+                        cwd: 'client/css/'
                     },
                     {
                         src: ['**'],
-                        dest: 'dist/js/lib',
+                        dest: 'dist/js/lib/',
                         expand: true,
-                        cwd: 'client/js/lib'
+                        cwd: 'client/js/lib/'
                     }
                 ]
             }

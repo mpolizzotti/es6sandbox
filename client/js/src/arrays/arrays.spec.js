@@ -72,6 +72,10 @@ describe('Array Comprehensions', function () {
     // Comprehensions are causing parse errors with the browserify plugin,
     // which is why these tests are currently commented out.
 
+    // Support note:
+    // Array comprehension didn't make it into the final version of ES6 and it doesn't seem
+    // to be considered for the next version either: https://github.com/tc39/ecma262
+
     /*
     it('should create arrays easily.', function () {
         let ary = [1, 2, 3];

@@ -1,5 +1,5 @@
 # ES6 Sandbox
-Sandbox for ES6 using jasmine, babel, browserify and grunt. This repo is a personal playground used to gain experience and exposure to ES6 features using the Babel transpiler.
+Sandbox for ES6 using jasmine, babel and grunt. This repo is a personal playground used to gain experience and exposure to ES6 features using the Babel transpiler.
 
 # Get Started
 ## Clone the Repository

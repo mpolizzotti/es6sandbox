@@ -8,15 +8,17 @@ module.exports = function (grunt) {
     });
 
     // Load plugins/tasks.
-    grunt.loadNpmTasks('grunt-browserify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.task.loadTasks('tasks');
 
     // build
     // Build the distribution folder (ES6 to ES5).
-    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'browserify']);
+    grunt.registerTask('build', ['clean:setup', 'copy:dist', 'babel', 'concat:spec', 'clean:teardown']);
 
     // grunt
     // Default tasks that execute with the grunt command.

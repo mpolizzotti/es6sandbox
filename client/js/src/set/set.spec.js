@@ -107,7 +107,7 @@ describe('Set Object', function () {
 
         // Calling .values() returns an iterator object of values.
         let values = set.values();
-        console.log('values: ', values);
+        //console.log('values: ', values);
 
         // Calling .next().value returns the value.
         let first = values.next().value;

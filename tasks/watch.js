@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['client/js/**/*.spec.js'],
-                tasks: ['browserify']
+                tasks: ['build']
             }
         }
     });
