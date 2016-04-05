@@ -22,6 +22,12 @@ module.exports = function (grunt) {
                         dest: 'dist/js/lib/',
                         expand: true,
                         cwd: 'client/js/lib/'
+                    },
+                    {
+                        src: ['**'],
+                        dest: 'dist/js/mock/',
+                        expand: true,
+                        cwd: 'client/js/mock/'
                     }
                 ]
             }
