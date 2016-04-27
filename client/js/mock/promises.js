@@ -19,3 +19,59 @@ function getCourse(courseId) {
 
     return Promise.resolve(courses[courseId]);
 }
+
+function pause(delay) {
+    setTimeout(function () {
+        console.log('paused for ' + delay + 'ms');
+        async.resume();
+    }, delay);
+}
+
+function getStockPrice() {
+    setTimeout(function () {
+        async.resume(50);
+    }, 300);
+}
+
+function getStockPriceFailure() {
+    setTimeout(function () {
+        try {
+            throw Error('There was a problem with the trade.');
+            async.resume(50);
+        } catch(e) {
+            async.fail(e);
+        }
+
+        async.resume(50);
+    }, 300);
+}
+
+function executeTrade() {
+    setTimeout(function () {
+        console.log('Trade executed.');
+        async.resume();
+    }, 300);
+}
+
+(function () {
+    var sequence;
+
+    var run = function (generator) {
+        sequence = generator();
+        var next = sequence.next();
+    };
+
+    var resume = function (value) {
+        sequence.next(value);
+    }
+
+    var fail = function (reason) {
+        sequence.throw(reason);
+    }
+
+    window.async = {
+        run: run,
+        resume: resume,
+        fail: fail
+    }
+}());

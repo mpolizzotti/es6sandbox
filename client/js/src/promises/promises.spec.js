@@ -140,3 +140,73 @@ describe('Promises', function () {
         });
     });
 });
+
+describe('Async Generators', function () {
+    xit('should be difficult to read with regular aync operations.', function (done) {
+        console.log('start');
+        pause(500);
+        console.log('middle');
+        pause(500);
+        console.log('end');
+
+        done();
+    });
+
+    it('should be easy to read with generators operations.', function (done) {
+        let value = 'start';
+        function* main () {
+            value = 'start';
+            expect(value).toBe('start');
+            console.log(value);
+
+            yield pause(500);
+            value = 'middle';
+            expect(value).toBe('middle');
+            console.log(value);
+
+            yield pause(500);
+            value = 'end';
+            expect(value).toBe('end');
+            console.log(value);
+
+            done();
+        }
+
+        async.run(main);
+    });
+
+    it('should work with returned data.', function (done) {
+        function* main() {
+            let price = yield getStockPrice();
+            if (price > 45) {
+                expect(price).toBe(50);
+                yield executeTrade();
+            } else {
+                console.log('Trade not made.');
+            }
+            done();
+        }
+
+        async.run(main);
+    });
+
+    it('should work with errors.', function (done) {
+        function* main() {
+            try {
+                let price = yield getStockPriceFailure();
+                if (price > 45) {
+                    yield executeTrade();
+                } else {
+                    console.log('Trade not made.');
+                }
+            } catch(e) {
+                console.log('Error! ', e.message);
+                expect(e.message).toBe('There was a problem with the trade.');
+            }
+
+            done();
+        }
+
+        async.run(main);
+    });
+});
